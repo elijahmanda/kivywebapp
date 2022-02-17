@@ -12,32 +12,33 @@ package.domain = org.kivybrowser
 # (str) Source code where the main.py live
 source.dir = .
 
+version = 1.0
 # (list) Source files to include (let empty to include all the files)
 source.include_exts = py,png,jpg,jpeg,ttf,kv,json,txt
 
 # (list) List of inclusions using pattern matching
-source.include_patterns = assets/*
-
+#source.include_patterns = assets/*
+p4a.branch = develop
 # (str) Application versioning (method 2)
-version.regex = __version__ = ['"](.*)['"]
+#version.regex = __version__ = ['"](.*)['"]
 #version.filename = %(source.dir)s/../../kivymd/__init__.py
 
-android.numeric_version = 1
+#android.numeric_version = 1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy==2.0.0,https://github.com/kivymd/KivyMD/archive/master.zip,pygments,sdl2_ttf==2.0.15,pillow
+requirements = python3,kivy==2.0.0,pygments,sdl2_ttf==2.0.15,pillow, jnius
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
-requirements.source.kivymd = ../../kivymd
+#requirements.source.kivymd = ../../kivymd
 
 # (str) Presplash of the application
-presplash.filename = %(source.dir)s/assets/logo.jpg
-
+#presplash.filename = %(source.dir)s/assets/logo.jpg
+osx.kivy_version = 2.0.0
 # (str) Icon of the application
-icon.filename = %(source.dir)s/assets/logo.jpg
-
+#icon.filename = %(source.dir)s/assets/logo.jpg
+osx.python_version = 3
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = portrait
 
@@ -45,7 +46,7 @@ orientation = portrait
 fullscreen = 0
 
 # (string) Presplash background color (for new android toolchain)
-android.presplash_color = #FFFFFF
+#android.presplash_color = #FFFFFF
 
 # (list) Permissions
 android.permissions = INTERNET
@@ -58,18 +59,18 @@ android.api = 28
 android.minapi = 21
 
 # (str) Android NDK version to use
-android.ndk = 19b
+#android.ndk = 19b
 
 # (bool) If True, then skip trying to update the Android sdk
 # This can be useful to avoid excess Internet downloads or save time
 # when an update is due and you just want to test/build your package
-android.skip_update = False
+#android.skip_update = False
 
 # (bool) If True, then automatically accept SDK license
 # agreements. This is intended for automation only. If set to False,
 # the default, you will be shown the license when first running
 # buildozer.
-android.accept_sdk_license = True
+#android.accept_sdk_license = True
 
 # (str) Android logcat filters to use
 # android.logcat_filters = *:S python:D
@@ -81,10 +82,10 @@ android.arch = armeabi-v7a
 [buildozer]
 
 # (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
-log_level = 2
+#log_level = 2
 
 # (int) Display warning if buildozer is run as root (0 = False, 1 = True)
-warn_on_root = 0
+#warn_on_root = 0
 
 # (str) Path to build artifact storage, absolute or relative to spec file
 build_dir = ./.buildozer
